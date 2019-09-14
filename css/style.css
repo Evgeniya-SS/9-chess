@@ -1,0 +1,52 @@
+
+.chessboard {
+    display: inline-block;
+    width: 1000px; 
+    height:1000px;
+    margin: 20px calc((100% - 1000px) / 2);
+    border-style:solid; 
+    font-size:20px; 
+    line-height:20px;; 
+    text-align:center;
+}
+    .chessboard > div {
+       height:100px;
+    }
+   
+   .chessboard > div > div {
+    display:inline-block; 
+    vertical-align:top;
+    width:100px; 
+    height:100px;
+    }
+
+    .chessboard > div:first-child {
+        background-color: #fff;
+        color: black;
+    }
+   
+   .chessboard > div:nth-child(odd) > div:nth-child(even),
+   .chessboard > div:nth-child(even) > div:nth-child(odd) {
+    background-color:black; 
+    color:#fff;
+    }
+
+    .chessboard > div:nth-child(odd) > div:last-child,
+    .chessboard > div:nth-child(even) > div:first-child {
+    background-color:#fff; 
+    color: black;
+    }
+    
+    .chessboard > div:last-child > div:nth-child(2n+1),
+    .chessboard > div:first-child > div:nth-child(2n) {
+    background-color:#fff; 
+    color: black;
+    }
+   
+    .chessboard > div:first-child > div {
+        transform: rotate(180deg);
+    }
+    .chessboard > div > div:last-child {
+        transform: rotate(180deg);
+    }
+
